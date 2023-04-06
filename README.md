@@ -1,5 +1,5 @@
 # test-data-generator
-Generates random data about persons (like what your'e storing information about, students, teachers, employees, etc.)
+Generates random data about persons (like what your'e storing information about, students, teachers, employees, etc.) that can be used for testing purposes.
 ## Installation
 To use this package in your project. Install by running command
 
@@ -8,13 +8,13 @@ To use this package in your project. Install by running command
 Import { generateTestData } function from this package. And then you can simply call this function and in return you will get generated data as array of objects in json form. You can pass parameters to specify which information should be kept for test data e.g.,
 ```js
 {
-    count:5,
-    id:true,
-    firstName:true,
-    lastName:true,
-    phone:true,
-    email:true,
-    address:true
+    count : 5,
+    id : true,
+    firstName : true,
+    lastName : true,
+    phone : true,
+    email : true,
+    address : true
 }
 ```
 'count' parameter is necessary, all the other params are optional and their default values are true. 'true' means you want to include this property in object and 'false' means that you wnat to add this property in object.
