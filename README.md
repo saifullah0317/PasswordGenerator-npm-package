@@ -8,7 +8,7 @@ To use this package in your project. Install by running command
 ## Usage
 Two functions/modules are provided by this package
 
-1. generatePassword
+### 1. generatePassword
 
 It takes five parameters
 - length (optioinal): desired length of password. It's default value is 6
@@ -17,7 +17,7 @@ It takes five parameters
 - useNumbers (optional): a boolean value indicating whether or not to use numbers in the password. Default value is true
 - useSymbols (optional): a boolean value indicating whether or not to use symbols (' ! @ # $ % & _ < > ? ') in the password. Default value is true
 
-2. generateMultiple
+### 2. generateMultiple
 
 It takes six parameters
 - count (optional): how many passwords you want. It's default value is 2
