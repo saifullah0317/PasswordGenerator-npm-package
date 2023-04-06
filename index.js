@@ -1,4 +1,4 @@
-export default function generateTestData(options) {
+export function generateTestData(options) {
   const { count = 1, id = true, firstName = true, lastName = true, phone = true, email = true, address = true } = options;
   const firstNames = ["John", "Jane", "Michael", "Jessica", "Davindex", "Samantha", "Chris", "Melissa"];
 const lastNames = ["Smith", "Johnson", "Brown", "Davis", "Garcia", "Wilson", "Taylor", "Jones"];
