@@ -7,7 +7,8 @@ To use this package in your project. Install by running command
 `npm install password-genrator`
 ## Usage
 Two functions/modules are provided by this package
-. generatePassword
+
+1. generatePassword
 
 It takes five parameters
 - length (optioinal): desired length of password. It's default value is 6
@@ -16,11 +17,13 @@ It takes five parameters
 - useNumbers (optional): a boolean value indicating whether or not to use numbers in the password. Default value is true
 - useSymbols (optional): a boolean value indicating whether or not to use symbols (' ! @ # $ % & _ < > ? ') in the password. Default value is true
 
-. generateMultiple
+2. generateMultiple
 
 It takes six parameters
 - count (optional): how many passwords you want. It's default value is 2
 - remaining five params are the same.
+
+Here's an example code running functions from this package:
 ```javascript
 import { generatePassword } from 'password-generator'
 
@@ -42,6 +45,6 @@ console.log(psw6); // [ 'BY9P5HFX', 'LK0W1TMR', 'OUVAI9CR' ]
 ```
 
 ## Github repos
-[https://github.com/saifullah0317/Number-to-words](https://github.com/saifullah0317/Number-to-words)
+[https://github.com/saifullah0317/PasswordGenerator-npm-package](https://github.com/saifullah0317/PasswordGenerator-npm-package)
 ## License
 This package is licensed under [ISC](https://opensource.org/license/isc-license-txt/)
