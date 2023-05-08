@@ -1,84 +1,48 @@
 # test-json-data-generator
-Generates random data about persons (like what your'e storing information about, students, teachers, employees, etc.) that can be used for testing purposes.
+Generates random data about entities (like what your'e storing information about, students, employees, cars, orders in a store etc.) that can be used for testing purposes. You should only specify attributes of that entity and type of each attribute and then you can generate a set of thousands of objects.
 ## Installation
 To use this package in your project. Install by running command
 
 `npm install test-data-genrator`
 ## Usage
-Import { generateTestData } function from this package. And then you can simply call this function and in return you will get generated data as array of objects in json form. You can pass parameters to specify which information should be kept for test data e.g.,
-```js
-{
-    count : 5,
-    id : true,
-    firstName : true,
-    lastName : true,
-    phone : true,
-    email : true,
-    address : true
-}
-```
-'count' parameter is necessary, all the other params are optional and their default values are true. 'true' means you want to include this property in object and 'false' means that you wnat to add this property in object.
+Import { generateTestData } function from this package. And then you can simply call this function and in return you will get generated data as array of objects in json form. You will pass parameters to specify attributes/properties of entity and type of each attribute. This is an example code to generate test data :
 ```javascript
 import { generateTestData } from 'test-json-data-generator'
 
-const usersArray1 = generateTestData();
-const usersArray2 = generateTestData({count:3,id:true,firstName:false});
+const attributes = {
+  name: "string",
+  age: "number",
+  address: "string",
+  isStudent: "boolean",
+  birthDate: "date"
+};
 
-console.log(usersArray1); // output
+const count = 3;
+
+const testData = generateTestData(attributes, count);
+
+console.log(testData); // output
 // [
 //   {
-//     index: 1,
-//     firstName: 'Samantha',
-//     lastName: 'Wilson',
-//     phone: '+1-0207938298',
-//     email: 'davindex.garcia@yahoo.com',
-//     address: {
-//       street: '765 Washington St',
-//       city: 'Phoenix',
-//       state: 'NY',
-//       zip: 88650
-//     }
+//     name: '65c34nbaod6d3jjhrd4rt',     
+//     age: 651,
+//     address: 'k7r42gcz1ykiebza97u8v',  
+//     isStudent: true,
+//     birthDate: '1957-11-10'
 //   },
 //   {
-//     index: 2,
-//     firstName: 'Samantha',
-//     lastName: 'Wilson',
-//     phone: '+1-8445609376',
-//     email: 'jessica.davis@outlook.com',
-//     address: {
-//       street: '122 Maple St',
-//       city: 'Houston',
-//       state: 'IL',
-//       zip: 18965
-//     }
-//   }
-// ]
-
-console.log(usersArray2); // output
-// [
-//   {
-//     index: 1,
-//     lastName: 'Jones',
-//     phone: '+1-8054499342',
-//     email: 'john.smith@gmail.com',  
-//     address: {
-//       street: '236 Washington St',  
-//       city: 'Phoenix',
-//       state: 'IL',
-//       zip: 97555
-//     }
+//     name: 'qjxkugwx3m8cdeodomoici',    
+//     age: 339,
+//     address: 'a2cobdpxeti085kj76xemeo',
+//     isStudent: false,
+//     birthDate: '2002-02-07'
 //   },
 //   {
-//     index: 2,
-//     lastName: 'Wilson',
-//     phone: '+1-5278363392',
-//     email: 'chris.taylor@gmail.com',
-//     address: {
-//       street: '98 Broadway',        
-//       city: 'Los Angeles',
-//       state: 'NY',
-//       zip: 99486
-//     }
+//     name: 'k51hku5mmdmm4zy5a7fwx',     
+//     age: 839,
+//     address: 'pcywb9y47fie6f5aundwul', 
+//     isStudent: true,
+//     birthDate: '1962-03-30'
 //   }
 // ]
 
