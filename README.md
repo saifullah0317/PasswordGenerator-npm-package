@@ -3,7 +3,7 @@ Generates random data about entities (like what your'e storing information about
 ## Installation
 To use this package in your project. Install by running command
 
-`npm install test-data-genrator`
+`npm install test-json-data-genrator`
 ## Usage
 Import { generateTestData } function from this package. And then you can simply call this function and in return you will get generated data as array of objects in json form. You will pass parameters to specify attributes/properties of entity and type of each attribute. This is an example code to generate test data :
 ```javascript
